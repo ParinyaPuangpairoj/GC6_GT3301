@@ -114,7 +114,7 @@ df = scaler.fit_transform(df)
 
 # Reads in saved regression model
 load_clf1 = pickle.load(open('20221201_XGBModel.pkl', 'rb'))
-load_clf2 = pickle.load(open('20221201_RFModel.pkl', 'rb'))
+#load_clf2 = pickle.load(open('20221201_RFModel.pkl', 'rb'))
 
 #radio button 
 # Apply model to make predictions
