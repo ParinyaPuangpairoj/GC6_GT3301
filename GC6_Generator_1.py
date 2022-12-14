@@ -25,6 +25,7 @@ select = st.sidebar.radio("Select Model",('XGBoost Regression','Random Forest Re
 
 if uploaded_file is not None:
     input_df2 = pd.read_csv(uploaded_file)
+    #input_df = input_df2
     input_df = input_df2.drop(columns=['Start_time','End_time','Severity'])
 else:
     def user_input_features():
@@ -114,7 +115,7 @@ df = scaler.fit_transform(df)
 
 # Reads in saved regression model
 load_clf1 = pickle.load(open('20221201_XGBModel.pkl', 'rb'))
-#load_clf2 = pickle.load(open('20221201_RFModel.pkl', 'rb'))
+load_clf2 = pickle.load(open('20221201_RFModel.pkl', 'rb'))
 
 #radio button 
 # Apply model to make predictions
